@@ -1,0 +1,29 @@
+---
+- block:
+  - name: register openstack repository
+    yum:
+      name: centos-release-openstack-ocata
+      state: installed
+  
+  - name: install rabbitmq-server package
+    yum:
+      name: rabbitmq-server
+      state: installed
+  
+  - name: set rabbitmq-server service enabled and started
+    service:
+      name: rabbitmq-server
+      state: started
+      enabled: yes
+  
+  - name: register rabbitmq user 'openstack'
+    rabbitmq_user:
+      user: openstack
+      password: "{{ openstack_rabbitmq.rabbitmq_user_pass }}"
+      permissions:
+        - vhost: /
+          configure_priv: .*
+          read_priv: .*
+          write_priv: .*
+      state: present
+  become: yes
