@@ -42,7 +42,7 @@ openstack_rabbitmq:
 ## Retest
 This role is tested by serverspec, then its test codes are included in repository. Users can retest this role by using the test codes. To retest this role, follow the steps described below.
 
-1. Prepare targets (Here, target ip are X.X.X.X)
+1. Prepare 1 target (Here, target ip are X.X.X.X)
 2. Install serverspec in local machine
 3. Modify spec/inventory.yml
 ```
@@ -57,7 +57,7 @@ This role is tested by serverspec, then its test codes are included in repositor
   sudo_pass:           # sudo password of user
 ```
 
-4. Modify targets ips in any files of `spec` dir
+4. Modify targets ip in any files of `spec` dir
 ```
 $ sed -i 's/192\.168\.1\.115/X.X.X.X/g' `find spec -type f`
 ```
