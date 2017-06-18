@@ -10,5 +10,5 @@ openstack_common:
   exec_yum_update: yes
 
 openstack_rabbitmq:
-  rabbitmq_user_pass: p@ssw0rd
+  rabbitmq_user_pass: password
 
