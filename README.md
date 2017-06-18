@@ -27,7 +27,7 @@ This role executes the following settings.
 ## Role variables
 ```
 openstack_rabbitmq:
-  rabbitmq_user_pass: p@ssw0rd  # password of rabbitmq user 'openstack'
+  rabbitmq_user_pass: password  # password of rabbitmq user 'openstack'
 ```
 
 ## Dependencies
