@@ -31,7 +31,7 @@ openstack_rabbitmq:
 ```
 
 ## Dependencies
-None
+- [bbrfkr.openstack_common](https://galaxy.ansible.com/bbrfkr/openstack_common/)
 
 ## Build status
 |branch|status|
@@ -57,7 +57,12 @@ This role is tested by serverspec, then its test codes are included in repositor
   sudo_pass:           # sudo password of user
 ```
 
-4. Run `rake`
+4. Modify targets ips in any files of `spec` dir
+```
+$ sed -i 's/192\.168\.1\.115/X.X.X.X/g' `find spec -type f`
+```
+
+5. Run `rake`
 
 ## License
 MIT
