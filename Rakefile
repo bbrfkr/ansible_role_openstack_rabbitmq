@@ -21,7 +21,7 @@ def generate_ansible_inventory(name, host, port, user, pass, idkey, sudo_pass)
 end
 
 def copy_role_for_spec
-  copy_dest = "spec/roles/openstack_rabbitmq"
+  copy_dest = "spec/roles/bbrfkr.openstack_rabbitmq"
   if not Dir.exist?(copy_dest)
     FileUtils.mkdir_p(copy_dest)
   end

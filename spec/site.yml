@@ -1,4 +1,4 @@
 ---
 - hosts: all
   roles:
-    - openstack_rabbitmq
+    - bbrfkr.openstack_rabbitmq
